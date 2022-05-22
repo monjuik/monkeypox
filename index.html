@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
+    <!-- Custom styles for this template -->
+    <style>
+		.b-divider {
+			height: 3rem;
+			background-color: rgba(0, 0, 0, .1);
+			border: solid rgba(0, 0, 0, .15);
+			border-width: 1px 0;
+			box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+		}
+
+		.bi {
+			vertical-align: -.125em;
+			fill: currentColor;
+		}
+
+		.feature-icon {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			width: 4rem;
+			height: 4rem;
+			margin-bottom: 1rem;
+			font-size: 2rem;
+			color: #fff;
+			border-radius: .75rem;
+		}
+
+		.icon-link {
+			display: inline-flex;
+			align-items: center;
+		}
+
+		.icon-link>.bi {
+			margin-top: .125rem;
+			margin-left: .125rem;
+			transition: transform .25s ease-in-out;
+			fill: currentColor;
+		}
+
+		.icon-link:hover>.bi {
+			transform: translate(.25rem);
+		}
+
+		.icon-square {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			width: 3rem;
+			height: 3rem;
+			font-size: 1.5rem;
+			border-radius: .75rem;
+		}
+
+		.rounded-4 {
+			border-radius: .5rem;
+		}
+
+		.rounded-5 {
+			border-radius: 1rem;
+		}
+
+		.text-shadow-1 {
+			text-shadow: 0 .125rem .25rem rgba(0, 0, 0, .25);
+		}
+
+		.text-shadow-2 {
+			text-shadow: 0 .25rem .5rem rgba(0, 0, 0, .25);
+		}
+
+		.text-shadow-3 {
+			text-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .25);
+		}
+
+        .height-capped{
+            max-height: 600px;
+         }
+
+
+    </style>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {
+        'packages':['geochart', 'corechart', 'bar'],
+      });
+      google.charts.setOnLoadCallback(drawRegionsMap);
+      google.charts.setOnLoadCallback(drawStacked);
+
+      function drawRegionsMap() {
+        var data = google.visualization.arrayToDataTable([
+          ['Country', 'Confirmed cases'],
+          ['Australia', 5],
+          ['Belgium', 5],
+          ['Canada', 5],
+          ['France', 5],
+          ['Germany', 5],
+          ['Netherlands', 5],
+          ['Portugal', 30],
+          ['Spain', 30],
+          ['Sweden', 5],
+          ['UK', 30],
+          ['US', 5],
+          ['Italy', 5]
+        ]);
+
+        var options = {};
+
+        var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
+
+        chart.draw(data, options);
+      }
+
+    function drawStacked() {
+          var data = new google.visualization.DataTable();
+          data.addColumn('date', 'Date');
+          data.addColumn('number', 'Confirmed');
+          data.addColumn('number', 'Suspected');
+
+          data.addRows([
+            [new Date('2022-05-18'), 9, 0],
+            [new Date('2022-05-21'), 92, 28]
+          ]);
+
+          var options = {
+            title: 'Motivation and Energy Level Throughout the Day',
+            isStacked: true,
+            vAxis: {
+              title: 'Number of cases'
+            },
+            hAxis: {
+                format: 'M/d/yy',
+                gridlines: {count: 3}
+              }
+          };
+
+          var chart = new google.visualization.ColumnChart(document.getElementById('history_div'));
+          chart.draw(data, options);
+        }
+    </script>
+    <title>Monkeypox dashboard</title>
+</head>
+
+<body>
+
+<!--Header-->
+<div class="container">
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+            <em class="bi-info-lg" style="font-size: 1.6em; color: cornflowerblue;">&nbsp;</em>
+            <span class="fs-4">Monkeypox dashboard</span>
+        </a>
+
+        <ul class="nav nav-pills">
+            <li class="nav-item"><a href="#symptoms" class="nav-link" aria-current="page">Symptoms</a></li>
+            <li class="nav-item"><a href="#transmission" class="nav-link">Transmission</a></li>
+            <li class="nav-item"><a href="#prevention" class="nav-link">Prevention</a></li>
+            <li class="nav-item"><a href="#faq" class="nav-link">FAQ</a></li>
+        </ul>
+    </header>
+</div>
+
+<div class="px-4 py-5 my-5">
+    <h2 class="text-secondary text-center">Dashboard</h2>
+    <div class="col-lg-6 mx-auto" id="regions_div" style="width: 900px; height: 500px;"></div>
+    <p class="col-lg-6 mx-auto text-secondary">Confirmed cases: up to given numbers. Data, provided by WHO, contains intervals.</p>
+    <h2 class="text-secondary text-center">Confirmed and suspected cases</h2>
+    <div class="col-lg-6 mx-auto" id="history_div" style="width: 900px; height: 500px;"></div>
+</div>
+
+<div class="bg-secondary py-5 text-center ">
+    <h1 class="display-1 text-light">Fatality rate: from 3.6% to 10.6%</h1>
+    <p class="lead mb-4 text-light">For West African clade and Congo Basin clade.</p>
+</div>
+
+<a id="symptoms" style="font-size:0;"></a>
+<div class="px-4 py-5 my-5">
+    <h2 class="text-secondary text-center">Symptoms</h2>
+    <p class="col-lg-6 mx-auto text-secondary">Symptoms of monkeypox usually start with a fever, followed by a headache,
+        muscle pain, back pain, swollen lymph nodes, chills, and fatigue.<br />
+        A rash may also develop,
+        often beginning on the face and then spreading to other parts of the body,
+        including the genitals.
+        This rash usually goes through different stages,
+        sometimes looking like chickenpox or syphilis, before finally forming a scab that falls off later.</p>
+</div>
+
+<div class="b-divider"></div>
+
+<a id="transmission" style="font-size:0;"></a>
+<div class="px-4 py-5 my-5">
+    <h2 class="text-secondary text-center">Transmission</h2>
+    <p class="col-lg-6 mx-auto text-secondary">Transmission of monkeypox between people is rare
+        and usually only occurs through close contact with an infected individual. <br />
+        The virus can enter the body through broken skin, the respiratory tract, or mucous membranes. <br />
+        Person-to-person spread typically occurs through contact with clothing or linens used by an infected person,
+        direct contact with monkeypox skin lesions or scabs,
+        or by coughing or sneezing of an individual with a monkeypox rash.</p>
+</div>
+
+<div class="b-divider"></div>
+
+<a id="prevention" style="font-size:0;"></a>
+<div class="px-4 py-5 my-5">
+    <h2 class="text-secondary text-center">Prevention</h2>
+    <p class="col-lg-6 mx-auto text-secondary">During human monkeypox outbreaks,
+        the most significant risk factor for monkeypox virus infection is close contact with infected persons.<br />
+        If possible, people who have been vaccinated against smallpox should be selected to care for the patient.
+        Implementing standard infection control precautions is important.<br />
+        Unprotected contact with wild animals, especially those that are sick or dead, should be avoided.
+        This includes contact with their meat, blood and other parts.
+        All foods containing animal meat or parts must be thoroughly cooked before eating.</p>
+    <h2 class="text-secondary text-center">Vaccination</h2>
+    <p class="col-lg-6 mx-auto text-secondary">Vaccination against smallpox is generally about 85% effective in preventing monkeypox,
+        though this number may vary depending on the vaccine used.<br />
+        Prior vaccination against smallpox can usually be determined by the presence of a scar on the upper arm.<br />
+        While there is currently no widely available vaccine or treatment for monkeypox,
+        the FDA has approved and expects two options (MVA-BN and tecovirimat)
+        to be more widely available in the coming years.</p>
+</div>
+
+<div class="b-divider"></div>
+
+<a id="faq" style="font-size:0;"></a>
+<div class="px-4 py-5 my-5">
+    <h2 class="text-secondary text-center">FAQ</h2>
+    <h5 class="text-secondary text-center">What is an incubation period of monkeypox?</h5>
+    <p class="col-lg-6 mx-auto text-secondary">Usually from 6 to 13 days but can range from 5 to 21 days.</p>
+    <h5 class="text-secondary text-center">Is monkeypox dangerous?</h5>
+    <p class="col-lg-6 mx-auto text-secondary">Monkeypox can range from mild to severe,
+        and tends to be more severe in populations with weaker immune systems,
+        like children, pregnant women, and those with other health conditions.<br />
+        The West African clade of monkeypox appears to cause less severe disease than the Congo Basin clade,
+        with a case fatality rate of 3.6% compared to 10.6%.</p>
+    <h5 class="text-secondary text-center">What causes monkeypox?</h5>
+    <p class="col-lg-6 mx-auto text-secondary">There are two distinct genetic clades of monkeypox virus –
+        the Central African (Congo Basin) clade and the West African clade.
+        Monkeypox virus is an enveloped double-stranded DNA virus that belongs to the Orthopoxvirus genus of the Poxviridae family.</p>
+    <h5 class="text-secondary text-center">Is monkeypox transmitted through sexual contact?</h5>
+    <p class="col-lg-6 mx-auto text-secondary">There is a lack of clear evidence demonstrating that monkeypox can be transmitted through sexual contact.<br />
+        However, as early cases have been predominantly found in gay and bisexual men,
+        further studies are needed to explore this possibility in greater detail.</p>
+</div>
+
+<div class="b-divider"></div>
+
+<a id="contacts" style="font-size:0;"></a>
+
+<div class="px-4 py-5 my-5">
+    <h2 class="text-secondary text-center">Sources</h2>
+    <ol class="col-lg-6 mx-auto text-secondary">
+        <li>https://www.who.int/emergencies/disease-outbreak-news/item/2022-DON385</li>
+        <li>https://www.gov.uk/guidance/monkeypox</li>
+    </ol>
+</div>
+
+
+<div class="container">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <div class="col-md-6 d-flex align-items-center">
+            <div class="text-muted">© 2022 monkeypox.monster, <a href="mailto:a.malinin@gmail.com">a.malinin@gmail.com</a>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
