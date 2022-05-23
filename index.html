@@ -110,12 +110,14 @@
           ['Portugal', 30],
           ['Spain', 30],
           ['Sweden', 5],
-          ['UK', 30],
+          ['GB', 30],
           ['US', 5],
           ['Italy', 5]
         ]);
 
-        var options = {};
+        var options = {
+	width: 80,
+    	width_units: '%'};
 
         var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
 
@@ -136,6 +138,8 @@
           var options = {
             title: 'Motivation and Energy Level Throughout the Day',
             isStacked: true,
+	    width: 80,
+            width_units: '%'
             vAxis: {
               title: 'Number of cases'
             },
