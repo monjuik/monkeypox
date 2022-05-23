@@ -115,9 +115,7 @@
           ['Italy', 5]
         ]);
 
-        var options = {
-	width: 80,
-    	width_units: '%'};
+        var options = {};
 
         var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
 
@@ -136,10 +134,8 @@
           ]);
 
           var options = {
-            title: 'Motivation and Energy Level Throughout the Day',
+            title: 'Monkeypox cases chart',
             isStacked: true,
-	    width: 80,
-            width_units: '%',
             vAxis: {
               title: 'Number of cases'
             },
