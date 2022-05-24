@@ -38,19 +38,27 @@
 
       function drawRegionsMap() {
         var data = google.visualization.arrayToDataTable([
-          ['Country', 'Confirmed cases'],
-          ['Australia', 5],
-          ['Belgium', 5],
+          ['Country', 'Подтверждённые случаи'],
+          ['Australia', 2],
+          ['Austria', 1],
+          ['Belgium', 4],
           ['Canada', 5],
-          ['France', 5],
-          ['Germany', 5],
-          ['Netherlands', 5],
-          ['Portugal', 30],
-          ['Spain', 30],
-          ['Sweden', 5],
-          ['GB', 30],
-          ['US', 5],
-          ['Italy', 5]
+          ['Czech Republic', 1],
+          ['Denmark', 1],
+          ['France', 3],
+          ['Germany', 7],
+          ['Israel', 1],
+          ['Italy', 4],
+          ['Netherlands', 6],
+          ['Portugal', 37],
+          ['Scotland', 1],
+          ['Slovenia', 1],
+          ['Spain', 41],
+          ['Sweden', 1],
+          ['Switzerland', 1],
+          ['GB', 70],
+          ['United Arab Emirates', 1],
+          ['US', 2]
         ]);
 
         var options = {};
@@ -63,23 +71,23 @@
     function drawStacked() {
           var data = new google.visualization.DataTable();
           data.addColumn('date', 'Date');
-          data.addColumn('number', 'Confirmed');
-          data.addColumn('number', 'Suspected');
+          data.addColumn('number', 'Подтверждено');
+          data.addColumn('number', 'Подозревается');
 
           data.addRows([
-            [new Date('2022-05-18'), 9, 0],
-            [new Date('2022-05-21'), 92, 28]
+            [new Date('2022-05-18'), 21, 0],
+            [new Date('2022-05-21'), 92, 28],
+            [new Date('2022-05-24'), 191, 94]
           ]);
 
           var options = {
-            title: 'Motivation and Energy Level Throughout the Day',
             isStacked: true,
             vAxis: {
               title: 'Number of cases'
             },
             hAxis: {
                 format: 'M/d/yy',
-                gridlines: {count: 3}
+                gridlines: {count: 4}
               }
           };
 
@@ -122,7 +130,6 @@
 <div class="px-4 py-5 my-5">
     <h2 class="text-secondary text-center">Подтвержденные случаи заболевания по странам</h2>
     <div class="col-lg-6 mx-auto" id="regions_div" style="width: 900px; height: 500px;"></div>
-    <p class="col-lg-6 mx-auto text-secondary">ВОЗ предоставляет данные с интервалами, читайте график как «до указанного числа». Например, в Швеции до 5 случаев.</p>
     <h2 class="text-secondary text-center pt-4">Подтверждённые и подозреваемые случаи по датам</h2>
     <div class="col-lg-6 mx-auto" id="history_div" style="width: 900px; height: 500px;"></div>
 </div>
