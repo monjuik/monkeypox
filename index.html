@@ -72,7 +72,6 @@
           ]);
 
           var options = {
-            title: 'Motivation and Energy Level Throughout the Day',
             isStacked: true,
             vAxis: {
               title: 'Number of cases'
@@ -120,10 +119,10 @@
 </div>
 
 <div class="px-4 py-5 my-5">
-    <h2 class="text-secondary text-center">Dashboard</h2>
+    <h2 class="text-secondary text-center">Confirmed cases by country</h2>
     <div class="col-lg-6 mx-auto" id="regions_div" style="width: 900px; height: 500px;"></div>
-    <p class="col-lg-6 mx-auto text-secondary">Confirmed cases: up to given numbers. Data, provided by WHO, contains intervals.</p>
-    <h2 class="text-secondary text-center">Confirmed and suspected cases</h2>
+    <p class="col-lg-6 mx-auto text-secondary">WHO provides data with intervals, you should read chart as "up to given number". E.g., in Sweden up to 5 cases.</p>
+    <h2 class="text-secondary text-center pt-4">Confirmed and suspected cases by date</h2>
     <div class="col-lg-6 mx-auto" id="history_div" style="width: 900px; height: 500px;"></div>
 </div>
 
@@ -135,8 +134,16 @@
 <a id="symptoms" style="font-size:0;"></a>
 <div class="px-4 py-5 my-5">
     <h2 class="text-secondary text-center">Symptoms</h2>
-    <p class="col-lg-6 mx-auto text-secondary">Symptoms of monkeypox usually start with a fever, followed by a headache,
-        muscle pain, back pain, swollen lymph nodes, chills, and fatigue.<br />
+    <p class="col-lg-6 mx-auto text-secondary">Symptoms of monkeypox usually start with a fever, followed by:</p>
+    <ul class="col-lg-6 mx-auto text-secondary">
+        <li>a headache,</li>
+        <li>muscle pain,</li>
+        <li>back pain,</li>
+        <li>swollen lymph nodes,</li>
+        <li>chills,</li>
+        <li>and fatigue.</li>
+    </ul>
+    <p class="col-lg-6 mx-auto text-secondary">
         A rash may also develop,
         often beginning on the face and then spreading to other parts of the body,
         including the genitals.
@@ -162,13 +169,16 @@
 <a id="prevention" style="font-size:0;"></a>
 <div class="px-4 py-5 my-5">
     <h2 class="text-secondary text-center">Prevention</h2>
-    <p class="col-lg-6 mx-auto text-secondary">During human monkeypox outbreaks,
-        the most significant risk factor for monkeypox virus infection is close contact with infected persons.<br />
-        If possible, people who have been vaccinated against smallpox should be selected to care for the patient.
-        Implementing standard infection control precautions is important.<br />
-        Unprotected contact with wild animals, especially those that are sick or dead, should be avoided.
+    <ol class="col-lg-6 mx-auto text-secondary">
+        <li>During human monkeypox outbreaks,
+            the most significant risk factor for monkeypox virus infection is close contact with infected persons.</li>
+        <li>If possible, people who have been vaccinated against smallpox should be selected to care for the patient.
+        Implementing standard infection control precautions is important.</li>
+        <li>Unprotected contact with wild animals, especially those that are sick or dead, should be avoided.
         This includes contact with their meat, blood and other parts.
-        All foods containing animal meat or parts must be thoroughly cooked before eating.</p>
+        All foods containing animal meat or parts must be thoroughly cooked before eating.</li>
+        <li><strong>Practice good hand hygiene after contact with infected animals or humans.
+            Wash your hands with soap and water or using an alcohol-based hand sanitizer.</strong></li></ol>
     <h2 class="text-secondary text-center">Vaccination</h2>
     <p class="col-lg-6 mx-auto text-secondary">Vaccination against smallpox is generally about 85% effective in preventing monkeypox,
         though this number may vary depending on the vaccine used.<br />
@@ -208,8 +218,9 @@
 <div class="px-4 py-5 my-5">
     <h2 class="text-secondary text-center">Sources</h2>
     <ol class="col-lg-6 mx-auto text-secondary">
-        <li>https://www.who.int/emergencies/disease-outbreak-news/item/2022-DON385</li>
-        <li>https://www.gov.uk/guidance/monkeypox</li>
+        <li>World Health Organization (https://www.who.int/health-topics/monkeypox)</li>
+        <li>UK government (https://www.gov.uk/guidance/monkeypox)</li>
+        <li>Centers for Disease Control and Prevention (https://www.cdc.gov/poxvirus/monkeypox/index.html)</li>
     </ol>
 </div>
 
