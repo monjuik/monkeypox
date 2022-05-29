@@ -39,26 +39,28 @@
       function drawRegionsMap() {
         var data = google.visualization.arrayToDataTable([
           ['Country', 'Подтверждённые случаи'],
+          ['Argentina', 2],
           ['Australia', 2],
           ['Austria', 1],
-          ['Belgium', 6],
-          ['Canada', 15],
-          ['Czech Republic', 1],
-          ['Denmark', 1],
-          ['France', 7],
-          ['Germany', 12],
-          ['Israel', 1],
-          ['Italy', 9],
+          ['Belgium', 9],
+          ['Canada', 26],
+          ['Czech Republic', 5],
+          ['Denmark', 2],
+          ['Finland', 1],
+          ['France', 16],
+          ['Germany', 21],
+          ['Israel', 2],
+          ['Italy', 12],
           ['Netherlands', 12],
-          ['Portugal', 49],
-          ['Scotland', 1],
-          ['Slovenia', 1],
-          ['Spain', 59],
+          ['Portugal', 74],
+          ['Scotland', 3],
+          ['Slovenia', 2],
+          ['Spain', 115],
           ['Sweden', 2],
-          ['Switzerland', 2],
-          ['GB', 77],
-          ['United Arab Emirates', 1],
-          ['US', 4]
+          ['Switzerland', 4],
+          ['GB', 101],
+          ['United Arab Emirates', 4],
+          ['US', 12]
         ]);
 
         var options = {};
@@ -78,7 +80,8 @@
             [new Date('2022-05-18'), 21, 0],
             [new Date('2022-05-21'), 92, 28],
             [new Date('2022-05-24'), 191, 94],
-            [new Date('2022-05-25'), 265, 83]
+            [new Date('2022-05-25'), 265, 83],
+            [new Date('2022-05-29'), 432, 75]
           ]);
 
           var options = {
