@@ -40,19 +40,19 @@
         var data = google.visualization.arrayToDataTable([
           ['Country', 'Confirmed cases'],
           ['Argentina', 2],
-          ['Australia', 5],
+          ['Australia', 6],
           ['Austria', 1],
           ['Belgium', 17],
-          ['Canada', 61],
+          ['Canada', 80],
           ['Czech Republic', 6],
           ['Denmark', 2],
           ['Finland', 2],
-          ['France', 33],
+          ['France', 51],
           ['Germany', 66],
           ['Hungary', 1],
           ['Ireland', 6],
           ['Israel', 2],
-          ['Italy', 21],
+          ['Italy', 22],
           ['Latvia', 1],
           ['Malta', 1],
           ['Mexico', 1],
@@ -66,7 +66,7 @@
           ['Switzerland', 8],
           ['GB', 214],
           ['United Arab Emirates', 8],
-          ['US', 23]
+          ['US', 27]
         ]);
 
         var options = {};
@@ -89,7 +89,8 @@
             [new Date('2022-05-25'), 265, 83],
             [new Date('2022-05-29'), 432, 75],
             [new Date('2022-05-31'), 626, 130],
-            [new Date('2022-06-03'), 877, 72]
+            [new Date('2022-06-03'), 877, 72],
+            [new Date('2022-06-05'), 920, 67]
           ]);
 
           var options = {
@@ -98,8 +99,8 @@
               title: 'Number of cases'
             },
             hAxis: {
-                format: 'M/d/yy',
-                gridlines: {count: 8}
+                format: 'M/d',
+                gridlines: {count: 10}
               }
           };
 
@@ -140,8 +141,8 @@
 </div>
 
 <div class="py-2 text-center">
-    <h1 class="display-1">877</h1>
-    <p class="lead mb-4">Total confirmed cases as of the 06/02/2022</p>
+    <h1 class="display-1">920</h1>
+    <p class="lead mb-4">Total confirmed cases as of the 06/05/2022</p>
 </div>
 
 <div class="b-divider"></div>
