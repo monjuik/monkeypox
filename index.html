@@ -39,35 +39,35 @@
       function drawRegionsMap() {
         var data = google.visualization.arrayToDataTable([
           ['Country', 'Confirmed cases'],
-          ['Argentina', 6],
-          ['Australia', 17],
-          ['Austria', 37],
+          ['Argentina', 9],
+          ['Australia', 24],
+          ['Austria', 62],
           ['Belgium', 168],
           ['Benin', 3],
-          ['Brazil', 142],
+          ['Brazil', 206],
           ['Bulgaria', 3],
-          ['Canada', 370],
+          ['Canada', 375],
           ['Chile', 13],
           ['Colombia', 5],
           ['Croatia', 1],
           ['Czech Republic', 8],
-          ['Denmark', 18],
+          ['Denmark', 29],
           ['Dominican Republic', 1],
           ['Ecuador', 1],
-          ['GB', 1285],
+          ['GB', 1482],
           ['Estonia', 1],
-          ['Finland', 10],
-          ['France', 577],
+          ['Finland', 13],
+          ['France', 721],
           ['Georgia', 1],
-          ['Germany', 1385],
+          ['Germany', 1556],
           ['Ghana', 18],
           ['Gibraltar', 1],
           ['Greece', 11],
-          ['Hungary', 19],
-          ['Iceland', 4],
+          ['Hungary', 24],
+          ['Iceland', 6],
           ['Ireland', 44],
-          ['Israel', 59],
-          ['Italy', 233],
+          ['Israel', 66],
+          ['Italy', 255],
           ['Jamaica', 1],
           ['Latvia', 2],
           ['Lebanon', 1],
@@ -75,31 +75,32 @@
           ['Malta', 4],
           ['Mexico', 11],
           ['Morocco', 1],
-          ['Netherlands', 402],
+          ['Netherlands', 503],
+          ['New Zealand', 1],
           ['Northern Ireland', 11],
-          ['Norway', 25],
+          ['Norway', 29],
           ['Panama', 1],
-          ['Peru', 15],
+          ['Peru', 18],
           ['Poland', 12],
-          ['Portugal', 433],
+          ['Portugal', 473],
           ['Puerto Rico', 1],
-          ['Romania', 11],
-          ['Scotland', 40],
+          ['Romania', 14],
+          ['Scotland', 41],
           ['Serbia', 1],
-          ['Singapore', 2],
+          ['Singapore', 4],
           ['Slovakia', 1],
-          ['Slovenia', 14],
-          ['South Africa', 2],
+          ['Slovenia', 18],
+          ['South Africa', 3],
           ['South Korea', 1],
-          ['Spain', 1258],
-          ['Sweden', 28],
-          ['Switzerland', 135],
+          ['Spain', 2034],
+          ['Sweden', 43],
+          ['Switzerland', 163],
           ['Taiwan', 1],
           ['Turkey', 1],
           ['United Arab Emirates', 13],
-          ['United States', 604],
+          ['United States', 766],
           ['Venezuela', 1],
-          ['Wales', 15]
+          ['Wales', 18]
         ]);
 
         var options = {};
@@ -137,7 +138,8 @@
             [new Date('2022-06-29'), 5155, 13],
             [new Date('2022-07-01'), 6178, 51],
             [new Date('2022-07-05'), 6940, 42],
-            [new Date('2022-07-07'), 7492, 42]
+            [new Date('2022-07-07'), 7492, 42],
+            [new Date('2022-07-11'), 9302, 38]
           ]);
 
           var options = {
@@ -146,8 +148,7 @@
               title: 'Number of cases'
             },
             hAxis: {
-                format: 'M/d',
-                gridlines: {count: 10}
+                format: 'M/d'
               }
           };
 
@@ -165,7 +166,7 @@
       gtag('config', 'G-5R5J2Q2YC1');
 
     </script>
-    <title>Monkeypox dashboard</title>
+    <title>Monkeypox Statistics</title>
 </head>
 
 <body>
@@ -188,8 +189,8 @@
 </div>
 
 <div class="py-2 text-center">
-    <h1 class="display-1">7492</h1>
-    <p class="lead mb-4">Total confirmed cases as of the 07/07/2022</p>
+    <h1 class="display-1">9302</h1>
+    <p class="lead mb-4">Total confirmed cases as of the 07/11/2022</p>
 </div>
 
 <div class="b-divider"></div>
