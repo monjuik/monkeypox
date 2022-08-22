@@ -42,24 +42,24 @@
           ['Country', 'Confirmed cases'],
           ['United States', 14050],
           ['Spain', 5790],
-          ['Brazil', 3449],
+          ['Brazil', 3787],
           ['Germany', 3266],
           ['GB', 3050],
           ['France', 2873],
-          ['Canada', 1125],
+          ['Canada', 1168],
+          ['Peru', 1127],
           ['Netherlands', 1087],
-          ['Peru', 936],
           ['Portugal', 770],
           ['Italy', 689],
           ['Belgium', 624],
           ['Switzerland', 399],
           ['Mexico', 251],
           ['Austria', 217],
-          ['Israel', 194],
-          ['Chile', 189],
-          ['Denmark', 163],
+          ['Israel', 208],
+          ['Chile', 207],
+          ['Denmark', 169],
+          ['Colombia', 164],
           ['Sweden', 139],
-          ['Colombia', 129],
           ['Ireland', 113],
           ['Poland', 104],
           ['Australia', 90],
@@ -71,9 +71,8 @@
           ['Greece', 50],
           ['Ghana', 46],
           ['Luxembourg', 45],
+          ['Bolivia', 43],
           ['Slovenia', 43],
-          ['Wales', 43],
-          ['Bolivia', 37],
           ['Czech Republic', 36],
           ['Romania', 33],
           ['Malta', 31],
@@ -88,12 +87,12 @@
           ['Slovakia', 10],
           ['Estonia', 9],
           ['India', 9],
+          ['Panama', 7],
           ['Dominican Republic', 6],
           ['Gibraltar', 6],
           ['Lebanon', 6],
           ['Saudi Arabia', 6],
           ['Lithuania', 5],
-          ['Panama', 5],
           ['South Africa', 5],
           ['Thailand', 5],
           ['Turkey', 5],
@@ -122,6 +121,7 @@
           ['Barbados', 1],
           ['Bermuda', 1],
           ['Guadeloupe', 1],
+          ['Indonesia', 1],
           ['Iran', 1],
           ['Montenegro', 1],
           ['Morocco', 1],
@@ -146,24 +146,6 @@
           data.addColumn('number', 'Suspected');
 
           data.addRows([
-            [new Date('2022-05-18'), 21, 0],
-            [new Date('2022-05-21'), 92, 28],
-            [new Date('2022-05-24'), 191, 94],
-            [new Date('2022-05-25'), 265, 83],
-            [new Date('2022-05-29'), 432, 75],
-            [new Date('2022-05-31'), 626, 130],
-            [new Date('2022-06-03'), 877, 72],
-            [new Date('2022-06-05'), 920, 67],
-            [new Date('2022-06-07'), 1064, 73],
-            [new Date('2022-06-09'), 1313, 84],
-            [new Date('2022-06-11'), 1482, 91],
-            [new Date('2022-06-13'), 1613, 101],
-            [new Date('2022-06-15'), 1988, 101],
-	        [new Date('2022-06-17'), 2549, 113],
-            [new Date('2022-06-20'), 2680, 101],
-            [new Date('2022-06-22'), 3336, 117],
-            [new Date('2022-06-24'), 4147, 82],
-            [new Date('2022-06-27'), 4378, 52],
             [new Date('2022-06-29'), 5155, 13],
             [new Date('2022-07-01'), 6178, 51],
             [new Date('2022-07-05'), 6940, 42],
@@ -185,7 +167,8 @@
             [new Date('2022-08-12'), 34709, 45],
             [new Date('2022-08-15'), 35861, 44],
             [new Date('2022-08-17'), 38384, 44],
-            [new Date('2022-08-19'), 40726, 44]
+            [new Date('2022-08-19'), 40726, 44],
+            [new Date('2022-08-22'), 41380, 44]
           ]);
 
           var options = {
@@ -237,8 +220,8 @@
 </div>
 
 <div class="py-2 text-center">
-    <h1 class="display-1">40726</h1>
-    <p class="lead mb-4">Total confirmed cases, 8 deaths as of the 08/19/2022</p>
+    <h1 class="display-1">41380</h1>
+    <p class="lead mb-4">Total confirmed cases, 8 deaths as of the 08/22/2022</p>
 </div>
 
 <div class="b-divider"></div>
@@ -247,7 +230,7 @@
 <div class="px-4 py-5 my-5">
     <h2 class="text-secondary text-center">Confirmed cases by country</h2>
     <div class="col-lg-6 mx-auto" id="regions_div" style="width: 900px; height: 500px;"></div>
-    <h2 class="text-secondary text-center pt-4">Confirmed and suspected cases by date</h2>
+    <h2 class="text-secondary text-center pt-4">Confirmed and suspected cases by date for last 8 weeks </h2>
     <div class="col-lg-6 mx-auto" id="history_div" style="width: 900px; height: 500px;"></div>
 </div>
 
